@@ -12,7 +12,7 @@ class PhoneBook {
 
     public static void main(String[] args) {
         int userChoice = 999;
-        while (userChoice != 0){
+        while(userChoice != 0) {
             System.out.println("");
             System.out.println(" 1 - Show contacts\n 2 - Add new contact\n 3 - Remove contact\n 0 - Close this app\n Input the number of command you want to execute:");
             Scanner scanner0 = new Scanner(System.in, "UTF-8");
@@ -31,8 +31,8 @@ class PhoneBook {
         }
     }
 
-    public static void showContacts(){
-        if (contacts.size() == 0){
+    public static void showContacts() {
+        if(contacts.size() == 0) {
             System.out.println("Your phonebook is empty. Add new contacts to use it :)");
         } else {
             contacts = contacts.entrySet()      
@@ -61,7 +61,7 @@ class PhoneBook {
         String contactName = nameScanner.nextLine();
         int numberOfPhonesToAdd = chooseNumberOfPhonesToAdd();
         List<Integer> phonesList = new ArrayList<>();
-        for (int i = 0; i < numberOfPhonesToAdd; i++) {
+        for(int i = 0; i < numberOfPhonesToAdd; i++) {
             System.out.println("Input the contact's phone №" + (i+1) + ":");
             Scanner scanner3 = new Scanner(System.in, "UTF-8");
             Integer contactPhone = scanner3.nextInt();
@@ -75,7 +75,7 @@ class PhoneBook {
         System.out.println("Input the name of the contact you want to remove: ");
         Scanner scanner4 = new Scanner(System.in, "UTF-8");
         String contactNameToRemove = scanner4.nextLine();
-        if (contacts.containsKey(contactNameToRemove)){
+        if(contacts.containsKey(contactNameToRemove)) {
             contacts.remove(contactNameToRemove);
             System.out.println("Contact " + contactNameToRemove + " was removed from your phonebook!");
         } else {
